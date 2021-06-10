@@ -1,7 +1,7 @@
 {
-  "name": "week3",
+  "name": "week6",
   "version": "1.0.0",
-  "description": "Week 3 assignments",
+  "description": "Week 6 assignments",
   "main": "index.js",
   "scripts": {
     "lint": "eslint **/*.ts --fix",
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^3.7.2"
+    "typescript": "^3.9.9"
   },
   "devDependencies": {
     "@types/chai": "^4.2.5",
@@ -20,7 +20,7 @@
     "@typescript-eslint/parser": "^2.7.0",
     "chai": "^4.2.0",
     "eslint": "^6.6.0",
-    "mocha": "^6.2.2",
-    "ts-node": "^8.5.0"
+    "mocha": "^6.2.3",
+    "ts-node": "^8.10.2"
   }
 }
