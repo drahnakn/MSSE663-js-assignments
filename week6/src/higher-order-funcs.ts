@@ -10,11 +10,16 @@
  */
  const things = ['thing1', 'thing2'];
 
+ type thing = {
+    id: number,
+    name: string
+}
+
  // create callback here
- const callback = (element: string, index: number) => ({ id: (index + 1), name: element.slice(0, -1) });
+ const mapCallback = (element: string, index: number) => ({ id: (index + 1), name: element.slice(0, -1) });
  
  // create map here
- export const results: Array<Object> = things.map(callback);
+ export const results: thing[] = things.map(mapCallback);
  console.log(results);
  
  /**
@@ -27,20 +32,6 @@
  
  // create function here
  
- // function filterThings(key: string) {
- //     const parsed = parseInt(key);
- //     if (isNaN(parsed)) {
- //         return result.filter(element => element.id === 0);
- //     }
- //     return result.filter(element => element.id === parsed);
- // } 
- 
- // function filterThingsByKey(key: string) {
- //     if(isNaN(parseInt(key))) {
- //         return results.filter(element => element.name === key);
- //     }
- //     return results.filter(element => element.id === parseInt(key));
- // }
- 
- // console.log(filterThingsByKey("1"));
- // console.log(filterThingsByKey("thing"));
+ const filterByKey = (key: string) => ((element: thing) => element.id === parseInt(key));
+ const filteredByKey = filterByKey('1');
+ export const filteredThings = results.filter(filteredByKey);

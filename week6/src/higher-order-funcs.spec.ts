@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import 'mocha';
-import { results } from './higher-order-funcs';
+import { results, filteredThings } from './higher-order-funcs';
 
 const expectedMapResult: Array<Object> = [{ id: 1, name: 'thing' }, { id: 2, name: 'thing' }];
 
@@ -9,5 +9,8 @@ describe('Higher Order Function tests', () => {
     expect(results).to.eql(expectedMapResult);
   });
 
-  it('#2 should return a single thing from array of things objects after hoisting and currying', () => {});
+  it('#2 should return a single thing from array of things objects after hoisting and currying', () => {
+    expect(results).to.have.lengthOf(2);
+    expect(filteredThings).to.have.lengthOf(1);
+  });
 });
