@@ -8,7 +8,7 @@
  * - Then Hoist the callback function.
  *
  */
-const things = ['thing1', 'thing2', 'thing3'];
+const things = ["thing1", "thing2", "thing3"];
 
 // create callback here
 
