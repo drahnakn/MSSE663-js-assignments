@@ -1,5 +1,5 @@
 // #1 Object Destructuring
-export const object = { name: 'elvis', title: 'hip swinger' };
+export const object = { name: "elvis", title: "hip swinger" };
 
 // deconstruct here
 export let { name: person, title: job } = object;
@@ -10,17 +10,17 @@ console.log(job); // 'hip swinger'
 
 // #2 Object Matching: Nested destructuring
 export const nestedObject = {
-  user: 'elvis',
+  user: "elvis",
   address: {
-    city: 'denver',
-    state: 'colorado'
+    city: "denver",
+    state: "colorado",
   },
-  id: 1
+  id: 1,
 };
 
 // deconstruct here
 
-export let {user, address, id} = nestedObject;
+export let { user, address, id } = nestedObject;
 
 // expected results:
 console.log(user); // 'elvis'
@@ -34,13 +34,13 @@ console.log(id); // 1
 export let newObject = {
   user: user,
   address: address,
-  id: id
+  id: id,
 };
 
 // #4 Object with key value pairs: construct a statement
-export const greetObj = { greeting: 'hello', name: 'taylor' };
+export const greetObj = { greeting: "hello", name: "taylor" };
 
 // construct statement here
-export const greeting = `${greetObj.greeting}, ${greetObj.name}!`
+export const greeting = `${greetObj.greeting}, ${greetObj.name}!`;
 
 // expected result: 'hello, taylor!'
